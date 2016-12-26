@@ -4,19 +4,85 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-   android:background="#11d20a"
-    tools:context="com.example.administrator.sweather.MainActivity"
-    >
+    tools:context="com.example.administrator.cweather.MainActivity">
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ViewFlipper
+            android:id="@+id/bckgrndViewFlipper1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <ImageView
+                android:id="@+id/bckgrndImageView8"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/andr" />
+            <ImageView
+                android:id="@+id/bckgrndImageView7"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/andro" />
+            <ImageView
+                android:id="@+id/bckgrndImageView6"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/android" />
+
+
+        </ViewFlipper>
+    </LinearLayout>
+
+
+    <Button
+        android:text="ServiceConnections"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/serv"
+        android:background="@drawable/edittextstyle"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:inputType="textPersonName"
+
+        android:ems="10"
+        android:background="@drawable/edittextstyle"
+        android:id="@+id/value1"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="85dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
 
     <TextView
-        android:text="Service"
+        android:text="City:-"
+        android:textColor="#faf9f9"
+        android:textSize="25sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="199dp"
         android:id="@+id/textView"
-        android:textSize="50dp"
+        android:layout_alignBaseline="@+id/value1"
+        android:layout_alignBottom="@+id/value1"
+        android:layout_alignLeft="@+id/serv"
+        android:layout_alignStart="@+id/serv" />
 
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add"
+        android:background="@drawable/edittextstyle"
+        android:layout_below="@+id/value1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" />
+
 </RelativeLayout>
